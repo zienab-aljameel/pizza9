@@ -1,0 +1,436 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.main .header {
+    width: 100%;
+    height: 70px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .header .title {
+    color: rgb(82, 12, 0);
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+}
+.main .header .shop_icon {
+    color: rgb(82, 12, 0);    
+    font-size: 32px;
+    z-index: 999999;
+}
+.main .row2 {
+    width: 100%;
+    height: 40px;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+}
+.main .row .pizza_title {
+    padding: 2px 22px;
+    background-color: rgba(255, 255, 0, 0.767);
+    border: none;
+    border-radius: 20px;
+    font-size: 17px;
+    color: rgb(44, 44, 44);
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main .row3 .pizza_container {
+    width: 70%;
+    height: 250px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 20px;
+}
+.main .row3 .pizza_container .table {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    top: 5px;
+    left: -2px;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(3px 15px 14px rgba(0, 0, 0, 0.158));
+    -webkit-filter: drop-shadow(3px 15px 14px rgba(0, 0, 0, 0.199));
+}
+
+.pizza_container .pizza_type img {
+    position: absolute;
+    width: 230px;
+    top: 20px;
+    left: 6px;
+    transition: 0.5s ease-in;
+    z-index: 9;
+}
+.table2 {
+    display: none;
+}
+.pizza_container .pizza_type .new_orleans_image {
+    width: 120px;
+    left: 247px;
+    top: 200px;
+    transition: 0.5s ease-in;
+    z-index: 9;
+}
+.pizza_container .pizza_type .meat_img {
+    width: 120px;
+    left: -124px;
+    top: 200px;
+    transition: 0.5s ease-in;
+}
+#meat {
+    display: none;
+}
+#meat:checked ~ .meat_img {
+    width: 230px;
+    left: 2px;
+    top: 21px;
+    z-index: 99;
+}
+#meat:checked ~ .ham_image2 {
+    width: 120px;
+    left: 247px;
+    top: 200px;
+    transition: 0.5s ease-in;
+    z-index: 99;
+}
+h2, h1 {
+    position: absolute;
+    bottom: -70px;
+    left: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #2e2e2e;
+    transition: 0.2s ease-in;
+}
+h1 {
+    bottom: -133px;
+    left: 95px;
+    font-size: 35px;
+    color: rgb(82, 12, 0);
+}
+.ham_pizza {
+    opacity: 0;
+}
+#meat:checked ~ .stuffed_crust {
+    opacity: 0;
+}
+#meat:checked ~ .ham_pizza {
+    opacity: 1;
+    left: 72px;
+}
+.seventeen {
+    opacity: 0;
+}
+.fifteen {
+    opacity: 1;
+}
+#meat:checked ~ .seventeen {
+    opacity: 1;
+}
+#meat:checked ~ .fifteen {
+    opacity: 0;
+}
+#meat:checked ~ .table2 {
+    display: block;
+    z-index: 9;
+    transition: 0.2s;
+}
+#new_orleans {
+    display: none;
+}
+.twelve {
+    opacity: 0;
+    z-index: 999;
+}
+#new_orleans:checked ~ .new_orleans_image {
+    position: absolute;
+    width: 233px;
+    top: 20px;
+    left: 2px;
+    z-index: 999;
+}
+#new_orleans:checked ~ .twelve {
+    opacity: 1;
+}
+.margherita_pizza {
+    opacity: 0;
+}
+#new_orleans:checked ~ .margherita_pizza {
+    opacity: 1;
+    width: 180px;
+    height:100px;
+    top: 290px;
+    left: 46px;
+    background-color: white;
+    z-index: 9;
+}
+#new_orleans:checked ~ .table3 {
+    z-index: 99;
+}
+#new_orleans:checked ~ .ham_image {
+    width: 120px;
+    left: -124px;
+    top: 200px;
+    z-index: 200;
+}
+.pizza_container .pizza_type .table3 {
+    width: 240px;
+    top: 13px;
+    left: 2px;
+}
+.toppings_row {
+    width: 100%;
+    height: 100px;
+    margin: 190px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 45px;
+}
+.toppings_row .toppings_title {
+    width: 100px;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    margin: 0 95px;
+}
+.toppings_row .toppings_images {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.toppings_row .image_container {
+    width: 55px;   
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(247, 247, 168, 0.596);
+    border-radius: 50%;
+}
+.toppings_row .image_container img {
+    width: 80%;
+}
+.toppings_row .image_container .small_garlic,
+.toppings_row .image_container .small_cucumber,
+.toppings_row .image_container .small_onion,
+.toppings_row .image_container .small_pepper {
+    width: 0px;
+    transition: 0.4s ease-in;
+}
+#garlic, #cucumber, #onion, #pepper{
+    display: none;
+}
+#garlic:checked ~ .small_garlic {
+    width: 30px;
+    transform: translate(130px, -460px);
+    z-index: 9999;
+}
+#garlic:checked ~ .garlic3 {
+    width: 35px;
+    transform: translate(170px, -480px);
+}
+.garlic4 {
+    transform: translate(-500px, -870px);
+}
+#garlic:checked ~ .garlic4 {
+    width: 30px;
+    transform: translate(60px, -390px);
+}
+.garlic5 {
+    width: 30px;
+    transform: translate(900px, -870px);
+}
+#garlic:checked ~ .garlic5 {
+    width: 40px;
+    transform: translate(70px, -370px);
+}
+.garlic6 {
+    transform: translate( 50px, -870px);
+}
+#garlic:checked ~ .garlic6 {
+    width: 47px;
+    transform: translate(100px, -400px);
+}
+
+#cucumber:checked ~ .small_cucumber {
+    width: 30px;
+    transform: translate(60px, -440px);
+    z-index: 9999;
+    transition: 0.4s ease-in;
+    display: block;
+    opacity: 1;
+}
+#cucumber:checked ~ .cucumber3 {
+    width: 35px;
+    transform: translate(160px, -30px);
+}
+#cucumber:checked ~ .cucumber3 {
+    transform: translate(20px, -360px);
+}
+#cucumber:checked ~ .cucumber4 {
+    width: 30px;
+    transform: translate(50px, -340px);
+}
+#cucumber:checked ~ .cucumber5 {
+    width: 40px;
+    transform: translate(80px, -390px);
+}
+#cucumber:checked ~ .cucumber6 {
+    width: 47px;
+    transform: translate(4px, -455px);
+}
+
+#onion:checked ~ .small_onion {
+    width: 30px;
+    transform: translate(-0px, -460px);
+    z-index: 9999;
+    transition: 0.4s ease-in;
+    display: block;
+    opacity: 1;
+}
+#onion:checked ~ .onion3 {
+    transform: translate(-70px, -440px);
+}
+#onion:checked ~ .onion4 {
+    width: 30px;
+    transform: translate(0px, -350px);
+}
+#onion:checked ~ .onion5 {
+    width: 40px;
+    transform: translate(0px, -400px);
+}
+#onion:checked ~ .onion6 {
+    width: 47px;
+    transform: translate(-100px, -390px);
+}
+
+#pepper:checked ~ .small_pepper {
+    width: 30px;
+    transform: translate(-0px, -460px);
+    z-index: 9999;
+    transition: 0.4s ease-in;
+    display: block;
+}
+#pepper:checked ~ .pepper2 {
+    transform: translate(-70px, -440px);
+}
+#pepper:checked ~ .pepper3 {
+    transform: translate(-70px, -440px);
+}
+#pepper:checked ~ .pepper4 {
+    width: 30px;
+    transform: translate(0px, -350px);
+}
+#pepper:checked ~ .pepper5 {
+    width: 40px;
+    transform: translate(0px, -400px);
+}
+#pepper:checked ~ .pepper6 {
+    width: 47px;
+    transform: translate(-100px, -390px);
+}
+
+.shop_icon2 {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: -157%;
+    left: 38%;
+    background-image: linear-gradient( rgba(255, 255, 0, 0.767), rgb(245, 159, 1));
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+    box-shadow: 0px 7px 7px  rgba(255, 187, 0, 0.884);
+}
+
+#buy {
+    display: none;
+}
+.new_orleans_image2 {
+    display: none;
+    transform: translate(-98px, -590px);
+    z-index: 999;
+}
+#buy:checked ~ .new_orleans_image2 {
+    display: block;
+    animation-name: ham_pizza;
+    animation-delay: 1s;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+@keyframes  ham_pizza {
+    0% {
+        transform: translate(-98px, -590px);
+    }
+    50% {
+        width: 200px;
+        transform: translate(-110px, -590px);
+}
+    100% {
+        transform: translate(155px, -713px);
+        width: 20px;
+    }
+}
+
+
+
+
+#buy:checked ~ .new_orleans_image2 {
+    display: block;
+    animation-name: ham_pizza;
+    animation-delay: 1s;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+@keyframes  ham_pizza {
+    0% {
+        transform: translate(-98px, -590px);
+    }
+    50% {
+        width: 260px;
+        transform: translate(-110px, -590px);
+}
+    100% {
+        transform: translate(155px, -713px);
+        width: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
